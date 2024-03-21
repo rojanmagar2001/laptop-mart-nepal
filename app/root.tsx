@@ -6,8 +6,12 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
-import { MainLayout } from "~/components/common/main_layout";
-import "./tailwind.css";
+import tailwind from "./tailwind.css?url";
+import { LinksFunction } from "@remix-run/node";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: tailwind },
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -25,7 +29,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         ></link>
       </head>
       <body>
-        <MainLayout>{children}</MainLayout>
+        {children}
         <LiveReload />
         <ScrollRestoration />
         <Scripts />

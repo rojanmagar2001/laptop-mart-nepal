@@ -2,8 +2,8 @@ import { MdMailOutline } from "react-icons/md";
 
 export default function TopHeader() {
   return (
-    <div className="w-full flex justify-center p-4 text-[12px] items-center border-b-[1px] border-b-gray-200">
-      <div className="flex gap-x-4 items-center">
+    <div className=" w-full flex justify-center p-2 sm:p-4 text-[12px] items-center border-b-[1px] border-b-gray-200">
+      <div className="hidden lg:flex gap-x-4 items-center">
         <button className="flex flex-row gap-x-2 items-center">
           <MdMailOutline size={18} />
           <p className="font-bold">Support</p>
@@ -23,7 +23,7 @@ export default function TopHeader() {
           <span className="w-full h-[1px] bg-black"></span>
         </a>
       </div>
-      <div className="flex gap-x-4 items-center font-bold text-[14px]">
+      <div className="hidden lg:flex gap-x-4 items-center font-bold text-[14px]">
         <button className="flex flex-row gap-x-2 items-center">
           <p className="font-bold">English</p>
           <MdMailOutline size={18} />
